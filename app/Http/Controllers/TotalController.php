@@ -47,17 +47,26 @@ class TotalController extends Controller
 
 
     public function place_prefer_store_post(Request $request){
+<<<<<<< HEAD
     	$place_id=$request->input('place_id');
     	$value_type=$request->input('value_type');
 
         echo $request::All();
+=======
 
 
+    	$place_id=$request->get('place_id');
+    	$value_type=$request->get('value_type');
+>>>>>>> 1f35d69d2879a899bdeefcfaf111d3793afe3531
+
+        
     	$place_prefer=new place_prefer();
         $place_prefer=$place_prefer->where('place_id',$place_id);
         if($place_prefer->count()==0){
+
             $insert_place_prefer=new place_prefer();
             $insert_place_prefer->place_id=$place_id;
+
             $insert_place_prefer->save();
         }
 
@@ -82,8 +91,8 @@ class TotalController extends Controller
 
         $place_prefer=new place_prefer();
         $place_prefer=$place_prefer->where('place_id',$place_id);
-        
-    	
+
+
 
         $response['status']=true;
         $response['data']=$place_prefer->get(array('like','dislike'));
