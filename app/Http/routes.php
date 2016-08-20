@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/place/favorite/retrieve',['as'=>'place.favorite.retrieve','uses'=>'TotalController@place_favorite_retrieve_get']);
-Route::post('/place/favorite/store',['as'=>'place.favorite.store','uses'=>'TotalController@place_favorite_store_post']);
+Route::get('/place/favorite/store',['as'=>'place.favorite.store','uses'=>'TotalController@place_favorite_store_post']);
 Route::get('/place/prefer/retrieve',['as'=>'place.prefer.retrieve','uses'=>'TotalController@place_prefer_retrieve_get']);
-Route::post('/place/prefer/store',['as'=>'place.prefer.store','uses'=>'TotalController@place_prefer_store_post']);
+Route::get('/place/prefer/store',['as'=>'place.prefer.store','uses'=>'TotalController@place_prefer_store_post']);
 

@@ -47,8 +47,10 @@ class TotalController extends Controller
 
 
     public function place_prefer_store_post(Request $request){
-    	$place_id=$request->get('place_id');
-    	$value_type=$request->get('value_type');
+    	$place_id=$request->input('place_id');
+    	$value_type=$request->input('value_type');
+
+        echo $request::All();
 
 
     	$place_prefer=new place_prefer();
