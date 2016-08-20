@@ -26,7 +26,7 @@ class TotalController extends Controller
     	}
 
 
-    	$response['status']=true;
+    	$response['status']=$place_id;
     	$response['message']='haha';
 
     	return $response;
@@ -52,7 +52,7 @@ class TotalController extends Controller
 
 
     	$place_prefer=new place_prefer();
-        $place_prefer->where('place_id',$place_id);
+        $place_prefer=$place_prefer->where('place_id',$place_id);
         if($place_prefer->count()==0){
             $insert_place_prefer=new place_prefer();
             $insert_place_prefer->place_id=$place_id;
@@ -69,7 +69,7 @@ class TotalController extends Controller
         }
 
 
-        $response['status']=true;
+        $response['status']=$place_id;
         $response['message']='haha';
 
         return $response;
