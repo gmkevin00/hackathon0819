@@ -50,6 +50,7 @@ class TotalController extends Controller
     	$place_id=$request->input('place_id');
     	$value_type=$request->input('value_type');
 
+        echo $request::All();
 
 
     	$place_prefer=new place_prefer();
